@@ -1,0 +1,20 @@
+JSX Conditional rendering
+
+import React from "react";
+export default function Weather(props) {
+  if (props.temperature >= 20) {
+    return (
+      <p>
+        It is {props.temperature}°C (Warm) in {props.city}
+      </p>
+    );
+  } else {
+    return (
+      <p>
+        It is {props.temperature}°C in {props.city}
+      </p>
+    );
+  }
+}
+
+
