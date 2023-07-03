@@ -1,4 +1,4 @@
-JSX Conditional rendering
+<!-- JSX Conditional rendering -->
 
 import React from "react";
 export default function Weather(props) {
@@ -16,5 +16,43 @@ export default function Weather(props) {
     );
   }
 }
+
+
+
+<!-- LOOPS -->
+
+let elements = ['one', 'two', 'three'];
+
+return (
+  <ul>
+    {elements.map(function(value, index) {
+      return <li key={index}>{value}</li>
+    })}
+  </ul>
+);
+
+<!-- Looping through an array of objects -->
+
+let elements = [{
+    name: 'one',
+    value: 1
+  },
+  {
+    name: 'two',
+    value: 2
+  },
+  {
+    name: 'three',
+    value: 3
+  }
+}]
+return (
+  <ul>
+    {elements.map(function(element, index) {
+      return <li key={index}>The value for {element.name} is {element.value}</li>
+    })}
+  </ul>
+);
+
 
 
