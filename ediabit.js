@@ -13,7 +13,15 @@
 // Notes
 // The amount of discs is always a positive integer.
 // 1 disc can be changed per move.
-
+function towerHanoi(discs) {
+    if (discs === 0) {
+      return 0;
+    } else if (discs === 1) {
+      return 1;
+    } else {
+      return 2 * towerHanoi(discs - 1) + 1;
+    }
+  }
 
 
 
