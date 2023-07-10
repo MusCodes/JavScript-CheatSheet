@@ -44,6 +44,46 @@ console.log(REGEXP.test(""));
 // [3, 4, 9, 10, 1]  // Array of 5 digits can also be thought of as...
 
 // [3, __ , 4, __ , 9, __, 10, __, 1]  // ...an array of 4 spots.
+function arrangeNumbers(arr) {
+  const oddArray = [];
+  const evenArray = [];
+
+  // Distribute numbers into oddArray and evenArray
+  arr.forEach(num => {
+    if (num % 2 === 0) {
+      evenArray.push(num);
+    } else {
+      oddArray.push(num);
+    }
+  });
+
+  const result = [];
+
+  
+  for (let i = 0; i < oddArray.length - 1; i++) {
+    result.push(oddArray[i]);
+    result.push(null); 
+  }
+
+  
+  for (let i = 0; i < evenArray.length - 1; i++) {
+    result.push(evenArray[i]);
+    result.push(null); 
+  }
+
+  if (oddArray.length > evenArray.length) {
+    result.push(oddArray[oddArray.length - 1]);
+  } else {
+    result.push(evenArray[evenArray.length - 1]);
+  }
+
+  return result;
+}
+
+
+const numbers = [3, 4, 9, 10, 1];
+const arrangedNumbers = arrangeNumbers(numbers);
+console.log(arrangedNumbers); 
 
 
 
