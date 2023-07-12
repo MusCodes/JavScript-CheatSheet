@@ -49,7 +49,7 @@ function arrangeNumbers(arr) {
   const evenArray = [];
 
   // Distribute numbers into oddArray and evenArray
-  arr.forEach(num => {
+  arr.forEach((num) => {
     if (num % 2 === 0) {
       evenArray.push(num);
     } else {
@@ -59,16 +59,14 @@ function arrangeNumbers(arr) {
 
   const result = [];
 
-  
   for (let i = 0; i < oddArray.length - 1; i++) {
     result.push(oddArray[i]);
-    result.push(null); 
+    result.push(null);
   }
 
-  
   for (let i = 0; i < evenArray.length - 1; i++) {
     result.push(evenArray[i]);
-    result.push(null); 
+    result.push(null);
   }
 
   if (oddArray.length > evenArray.length) {
@@ -80,14 +78,9 @@ function arrangeNumbers(arr) {
   return result;
 }
 
-
 const numbers = [3, 4, 9, 10, 1];
 const arrangedNumbers = arrangeNumbers(numbers);
-console.log(arrangedNumbers); 
-
-
-
-
+console.log(arrangedNumbers);
 
 // 4) Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item. Change will always be represented in the following order: quarters, dimes, nickels, pennies.
 
@@ -104,7 +97,6 @@ console.log(arrangedNumbers);
 
 // changeEnough([1, 0, 5, 219], 19.99) ➞ false
 
-
 // 5) Create a function that takes an array of numbers and returns the second largest number.
 
 // Examples
@@ -113,7 +105,6 @@ console.log(arrangedNumbers);
 // secondLargest([25, 143, 89, 13, 105]) ➞ 105
 
 // secondLargest([54, 23, 11, 17, 10]) ➞ 23
-
 
 // 6) Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
 
@@ -125,13 +116,8 @@ console.log(arrangedNumbers);
 // filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
 
 function filterArray(arr) {
-  return arr.filter(element => typeof element === 'number');
+  return arr.filter((element) => typeof element === "number");
 }
-
-
-
-
-
 
 //  7)  You will be given an array of drinks, with each drink being an object with two properties: name and price. Create a function that has the drinks array as an argument and return the drinks objects sorted by price in ascending order.
 
@@ -150,10 +136,6 @@ function sortDrinkByPrice(drinks) {
   return drinks.sort((a, b) => a.price - b.price);
 }
 
-
-
-
-
 //  8)  Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
 
 // Examples
@@ -162,4 +144,3 @@ function sortDrinkByPrice(drinks) {
 // findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]) ➞ [-34, -2, 7]
 
 // findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]) ➞ [0.7634, 9.32, 9]
-
