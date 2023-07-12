@@ -113,3 +113,13 @@ console.log(arrangedNumbers);
 // secondLargest([25, 143, 89, 13, 105]) ➞ 105
 
 // secondLargest([54, 23, 11, 17, 10]) ➞ 23
+
+
+// 6) Create a function that takes an array of non-negative integers and strings and return a new array without the strings.
+
+// Examples
+// filterArray([1, 2, "a", "b"]) ➞ [1, 2]
+
+// filterArray([1, "a", "b", 0, 15]) ➞ [1, 0, 15]
+
+// filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
