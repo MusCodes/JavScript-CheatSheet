@@ -124,6 +124,10 @@ console.log(arrangedNumbers);
 
 // filterArray([1, 2, "aasf", "1", "123", 123]) ➞ [1, 2, 123]
 
+function filterArray(arr) {
+  return arr.filter(element => typeof element === 'number');
+}
+
 
 
 
