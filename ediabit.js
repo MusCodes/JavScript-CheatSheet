@@ -146,6 +146,9 @@ function filterArray(arr) {
 // Examples
 // sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
 
+function sortDrinkByPrice(drinks) {
+  return drinks.sort((a, b) => a.price - b.price);
+}
 
 
 
